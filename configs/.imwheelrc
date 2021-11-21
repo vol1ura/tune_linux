@@ -26,72 +26,60 @@
 
 
 #Thanks to Mathias Weyland <mathias@weyland-wtal.de>
-"^mutt.*"
-None,           Up,     Up
-None,           Down,   Down
-Control_L,      Up,     Page_Up
-Control_L,      Down,   Page_Down
+# "^mutt.*"
+# None,           Up,     Up
+# None,           Down,   Down
+# Control_L,      Up,     Page_Up
+# Control_L,      Down,   Page_Down
 
 #Thanks to Mathias Weyland <mathias@weyland-wtal.de>
-"^aterm"
-None,           Up,     Shift_L|Page_Up
-None,           Down,   Shift_L|Page_Down
-Control_L,      Up,     Up
-Control_L,      Down,   Down
+# "^aterm"
+# None,           Up,     Shift_L|Page_Up
+# None,           Down,   Shift_L|Page_Down
+# Control_L,      Up,     Up
+# Control_L,      Down,   Down
 
 #Thanks to Mathias Weyland <mathias@weyland-wtal.de>
-"^Xplns"
-None,           Up,     Left
-None,           Down,   Right
-Control_L,      Up,     Up
-Control_L,      Down,   Down
+# "^Xplns"
+# None,           Up,     Left
+# None,           Down,   Right
+# Control_L,      Up,     Up
+# Control_L,      Down,   Down
 
-"^kvt"
-None,		Up,		Shift_L|Page_Up
-None,		Down,	Shift_L|Page_Down
+# "^XMcd"
+# None,		Up,		C
+# None,		Down,	Shift_L|C
 
-"^Konsole"
-None,		Up,		Shift_L|Page_Up
-None,		Down,	Shift_L|Page_Down
+# "^XMMS_Player"
+# Shift_L,		Up,		Right
+# Shift_L,		Down,	Left
 
-"^XMcd"
-None,		Up,		C
-None,		Down,	Shift_L|C
+# "^XMMS_Playlist"
+# Shift_L,	Up,		Page_Up
+# Shift_L,	Down,	Page_Down
 
-"^XMMS_Player"
-Shift_L,		Up,		Right
-Shift_L,		Down,	Left
+# "^xmms"
+# Alt_L,		Up,		Z
+# Alt_L,		Down,	B
+# Control_L,	Up,		V
+# Control_L,	Down,	C
 
-"^XMMS_Playlist"
-Shift_L,	Up,		Page_Up
-Shift_L,	Down,	Page_Down
+# "^Xman"
+# None,		Down,	F
+# Shift_L,	Down,	3
+# None,		Up,		B
 
-"^xmms"
-Alt_L,		Up,		Z
-Alt_L,		Down,	B
-Control_L,	Up,		V
-Control_L,	Down,	C
-
-"^XATITV-GATOS"
-None,       Down,	KP_Subtract
-None,       Up,		KP_Add
-
-"^Xman"
-None,		Down,	F
-Shift_L,	Down,	3
-None,		Up,		B
-
-"^Gvi(m|ew)"
-Alt_L,	Up,		Page_Up
-Alt_L,	Down,	Page_Down
-Shift_L,	Up,		Control_L|Y
-Shift_L,	Down,	Control_L|E
+# "^Gvi(m|ew)"
+# Alt_L,	Up,		Page_Up
+# Alt_L,	Down,	Page_Down
+# Shift_L,	Up,		Control_L|Y
+# Shift_L,	Down,	Control_L|E
 #None,		Up,		Page_Up
 #None,		Down,	Page_Down
-,	Left,	Shift_L|Left
-,	Right,	Shift_L|Right
-,	Thumb1,	Shift_L|Left
-,	Thumb2,	Shift_L|Right
+# ,	Left,	Shift_L|Left
+# ,	Right,	Shift_L|Right
+# ,	Thumb1,	Shift_L|Left
+# ,	Thumb2,	Shift_L|Right
 
 "^VIM"
 Shift_L,	Up,		Control_L|Y
@@ -99,9 +87,9 @@ Shift_L,	Down,	Control_L|E
 #None,		Up,		Page_Up
 #None,		Down,	Page_Down
 
-"^Eterm"
-Alt_L,		Up,		Up
-Alt_L,		Down,	Down
+# "^Eterm"
+# Alt_L,		Up,		Up
+# Alt_L,		Down,	Down
 #Alt_L,   	Up,     Shift_L|Page_Up
 #Alt_L,   	Down,   Shift_L|Page_Down
 
@@ -109,19 +97,19 @@ Alt_L,		Down,	Down
 #None,		Up,		Shift_L|Page_Up
 #None,		Down,	Shift_L|Page_Down
 
-"^NXTerm"
-None,   	Up,     Shift_L|Page_Up
-None,   	Down,   Shift_L|Page_Down
+# "^NXTerm"
+# None,   	Up,     Shift_L|Page_Up
+# None,   	Down,   Shift_L|Page_Down
 
-"^rxvt"
-Alt_L,  	Up,		Shift_L|Page_Up
-Alt_L,  	Down,	Shift_L|Page_Down
+# "^rxvt"
+# Alt_L,  	Up,		Shift_L|Page_Up
+# Alt_L,  	Down,	Shift_L|Page_Down
 
-"^XTerm"
-Alt_L,		Up,		Shift_R|Page_Up
-Alt_L,		Down,	Shift_R|Page_Down
-Alt_L,		Left,	Control_L|A
-Alt_L,		Right,	Control_L|E
+# "^XTerm"
+# Alt_L,		Up,		Shift_R|Page_Up
+# Alt_L,		Down,	Shift_R|Page_Down
+# Alt_L,		Left,	Control_L|A
+# Alt_L,		Right,	Control_L|E
 #Shift_L,	Down,	Shift_L|1
 
 "^VMware"
@@ -153,95 +141,52 @@ None,		Right,	Right,				7,
 #None,		Thumb2,	Up,					7,
 #Shift_L,	Thumb2,	Down,				7,
 
-"^Freespace.*"
-,	Up,		Y
-,	Down,	X
-,	Thumb1,	H
-,	Thumb2,	R
+# "^Freespace.*"
+# ,	Up,		Y
+# ,	Down,	X
+# ,	Thumb1,	H
+# ,	Thumb2,	R
 
-"^SDL_App"
-,	Thumb1,	Home	#many apps don't understand Button > 5
-,	Thumb2, End		#many apps don't understand Button > 5
+# "^SDL_App"
+# ,	Thumb1,	Home	#many apps don't understand Button > 5
+# ,	Thumb2, End		#many apps don't understand Button > 5
 
 # Thanks to shewp <shewplx@pblx.net>
-"^Opera" 
-None,       Down,   Down,               4,  100,    100
-None,       Up,     Up,                 4,  100,    100
+# "^Opera" 
+# None,       Down,   Down,               4,  100,    100
+# None,       Up,     Up,                 4,  100,    100
 #None,       Thumb1, Right
 #None,       Thumb2, Left
 
-"^Netscape.*"
-#, Thumb1, Alt_L|KP_Left
-#, Thumb2, Alt_L|KP_Right
-
-"^Netscape"
-#
-# If you don't want to scroll by a few lines then comment out these 4 lines
-# and uncomment the paging 4 lines below these!
-#
-Shift_L,	Down,	Page_Down,			1,	1000,	1000
-Shift_L,	Up,		Page_Up,			1,	1000,	1000
-None,		Down,	Down,				7,	1000,	1000
-None,		Up,		Up,					7,	1000,	1000
-#
-# If you don't like page scrolling then uncomment these
-# and comment out the 4 lines above!
-#
-#Shift_L,	Down,	Shift_L|Down,		7,	1000,	1000
-#Shift_L,	Up,		Shift_L|Up,			7,	1000,	1000
-#None,		Down,	Page_Down,			1,	1000,	1000
-#None,		Up,		Page_Up,			1,	1000,	1000
-# Left/Right & Thumb stuff
-None,		Left,	Left,				7,	1000,	1000
-None,		Right,	Right,				7,	1000,	1000
-#None,		Thumb1,	Down,				7,	1000,	1000
-#Shift_L,	Thumb1,	Up,					7,	1000,	1000
-#None,		Thumb2,	Up,					7,	1000,	1000
-#Shift_L,	Thumb2,	Down,				7,	1000,	1000
-
-"^Navigator"
-#Alt_L,		Down,	Alt_L|Right
-#Alt_L,		Up,		Alt_L|Left
-Alt_L,		Down,	Right,				10,	1000,	1000
-Alt_L,		Up,		Left,				10,	1000,	1000
-
-# Thanks to Paul J Collins <sneakums@usa.net>
-"^emacs"
-Shift_L,	Up,		Page_Up
-Shift_L,	Down,	Page_Down
-# you may need Alt instead of Meta....
-None,		Down,	Control_L|Meta_L|Shift_L|parenright
-None,		Up,		Control_L|Meta_L|Shift_L|parenleft
+# Thanks to etienne grossmann <etienne@isr.ist.utl.pt>
+# "^Xftp"
+# ,			Down,	j
+# ,			Up,		k
 
 # Thanks to etienne grossmann <etienne@isr.ist.utl.pt>
-"^Xftp"
-,			Down,	j
-,			Up,		k
+# "^gv[ :]"
+# None,		Up,		Shift_L|space
+# None,		Down,	space
 
-# Thanks to etienne grossmann <etienne@isr.ist.utl.pt>
-"^gv[ :]"
-None,		Up,		Shift_L|space
-None,		Down,	space
+# "^xv grab"
+# @Priority=1
+# @Exclude
 
-"^xv grab"
-@Priority=1
-@Exclude
+# "^XV.*"
+# None,	Down,	Tab
+# None,	Up,		Delete
 
-"^XV.*"
-None,	Down,	Tab
-None,	Up,		Delete
-
-"^Untitled"
-,	Up,		Page_Up
-,	Down,	Page_Down
+# "^Untitled"
+# ,	Up,		Page_Up
+# ,	Down,	Page_Down
 #,   Thumb1, Home
 #,   Thumb2, End
 
-"^No Title"
-,	Up,		Page_Up
-,	Down,	Page_Down
-,   Left, Home
-,   Right, End
+# "^No Title"
+# ,	Up,		Page_Up
+# ,	Down,	Page_Down
+# ,   Left, Home
+# ,   Right, End
 #,   Thumb1, Home
 #,   Thumb2, End
 

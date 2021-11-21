@@ -1,0 +1,36 @@
+# /etc/systemd/system/rclone.service
+# see https://gist.github.com/gmag11/dc139ffd6a8ca8b622e98ca6422f8d79
+# and https://www.jamescoyle.net/how-to/3116-rclone-systemd-startup-mount-script
+[Unit]
+Description=rclone FUSE mount for %i
+Documentation=http://rclone.org/docs/
+AssertPathIsDirectory=/media/vol1ura/%i
+After=network-online-target
+
+[Service]
+#Type=simple
+#User=vol1ura
+#Group=vol1ura
+ExecStart=/usr/bin/rclone mount %i: /media/vol1ura/%i \
+        --config=/home/vol1ura/.config/rclone/rclone.conf \
+        --allow-other \
+        --cache-tmp-upload-path=/tmp/rclone/upload \
+        --cache-chunk-path=/tmp/rclone/chunks \
+        --cache-workers=8 \
+        --cache-writes \
+        --cache-dir=/tmp/rclone/vfs \
+        --cache-db-path=/tmp/rclone/db \
+        --no-modtime \
+        --drive-use-trash \
+        --stats=0 \
+        --checkers=16 \
+        --bwlimit=40M \
+        --dir-cache-time=60m \
+        --cache-info-age=60m \
+        --vfs-cache-mode full
+ExecStop=/bin/fusermount -u /media/vol1ura/%i
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

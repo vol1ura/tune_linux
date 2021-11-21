@@ -1,6 +1,6 @@
 # Useful programs and configs
 
-## 1. IMWheel for remapping keyboard and mouse buttons
+## IMWheel for remapping keyboard and mouse buttons
 
 Install
 ```shell
@@ -11,7 +11,89 @@ Copy `.imwheel` to home directory and add it to auto load.
 
 See also https://wiki.archlinux.org/title/IMWheel
 
-## 2. Cinnamon customization
+## Zsh and Oh-my-zsh
+
+### 1. Install zsh
+
+```shell
+sudo apt install zsh
+sudo chsh -s /bin/zsh
+```
+
+### 2. Install oh-my-zsh
+
+```shell
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### 3. Add plugins `zsh-syntax-highlighting` and `zsh-autosuggestions`
+
+```shell
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+### 4. Configure `~/.zshrc` - see my config file.
+
+Here is my plugins set:
+
+```
+plugins=(git docker docker-compose zsh-syntax-highlighting zsh-autosuggestions rails rvm virtualenv command-not-found copybuffer)
+```
+
+## RClone to handle cloud disks
+
+See official documentation https://rclone.org/install/
+
+```shell
+curl https://rclone.org/install.sh | sudo bash
+rclone config
+```
+
+1. Edit and copy file `configs/rclone@.service` to `/lib/systemd/system`. 
+
+2. You need also to create a remote on RClone and a folder on your disk, both with same name <rclone-remote>.
+
+3. Register new service by typing:
+
+```shell
+sudo systemctl daemon-reload
+```
+4. Do the next one for every remote you want to load on boot
+
+```shell
+sudo systemctl enable rclone@<rclone-remote>.service
+sudo systemctl start rclone@<rclone-remote>.service
+```
+
+5. Check service
+
+```shell
+sudo systemctl status rclone@<rclone-remote>.service
+```
+
+My shell scripts runs Yandex.Disk and OneDrive.
+
+## Vim configuration
+
+I use Janus: https://github.com/carlhuda/janus
+
+## Midnight commander
+
+```shell
+sudo apt install mc
+select-editor
+```
+
+## fstab
+
+Edit `configs/fstab` and copy it to `/etc/fstab`
+
+```shell
+sudo cp ./configs/fstab /etc/fstab
+```
+
+## Cinnamon desktop customization
 
 https://www.youtube.com/watch?v=DMs7DX3Um9E
 
@@ -37,40 +119,3 @@ Theme plank: https://github.com/vinceliuice/WhiteSur-gtk-theme
 Download: https://software.opensuse.org/download.html?project=home%3Amanuelschneid3r&package=albert
 
 Theme: https://store.kde.org/p/1410038/
-
-## 3. Zsh and Oh-my-zsh 
-
-1. Install zsh
-
-```shell
-sudo apt install zsh
-sudo chsh -s /bin/zsh
-
-2. Install oh-my-zsh
-
-```shell
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-3. Add plugins `zsh-syntax-highlighting` and `zsh-autosuggestions`
-```shell
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-
-
-4. Configure `~/.zshrc` - see my config file.
-
-Here is my plugin set:
-```
-plugins=(git docker docker-compose zsh-syntax-highlighting zsh-autosuggestions rails rvm virtualenv command-not-found copybuffer)
-```
-
-## 4.
-
-
-## 5. Vim configuration
-
-I use Janus: https://github.com/carlhuda/janus
-
-
