@@ -81,9 +81,9 @@
 # ,	Thumb1,	Shift_L|Left
 # ,	Thumb2,	Shift_L|Right
 
-"^VIM"
-Shift_L,	Up,		Control_L|Y
-Shift_L,	Down,	Control_L|E
+#"^VIM"
+#Shift_L,	Up,		Control_L|Y
+#Shift_L,	Down,	Control_L|E
 #None,		Up,		Page_Up
 #None,		Down,	Page_Down
 
@@ -134,8 +134,8 @@ Shift_L,	Up,		Page_Up,			1#,	1000,	1000
 #None,		Down,	Page_Down,			1,
 #None,		Up,		Page_Up,			1,
 # Left/Right & Thumb stuff
-None,		Left,	Left,				7,
-None,		Right,	Right,				7,
+#None,		Left,	Left,				7,
+#None,		Right,	Right,				7,
 #None,		Thumb1,	Down,				7,
 #Shift_L,	Thumb1,	Up,					7,
 #None,		Thumb2,	Up,					7,
@@ -152,7 +152,7 @@ None,		Right,	Right,				7,
 # ,	Thumb2, End		#many apps don't understand Button > 5
 
 # Thanks to shewp <shewplx@pblx.net>
-# "^Opera" 
+# "^Opera"
 # None,       Down,   Down,               4,  100,    100
 # None,       Up,     Up,                 4,  100,    100
 #None,       Thumb1, Right
