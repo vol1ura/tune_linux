@@ -5,6 +5,7 @@ cp -f .config ~/.config
 cd configs || exit
 cp .zshrc ~/.zshrc
 cp .imwheelrc ~/.imwheelrc
+cp bullet-train.zsh-theme $ZSH_CUSTOM/themes
 # need root rights
 cp rclone@.service /lib/systemd/system/rclone@.service
 mkdir /media/vol1ura/onedrive

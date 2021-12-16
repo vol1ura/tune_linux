@@ -8,7 +8,7 @@ export ZSH="/home/vol1ura/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="bullet-train"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -98,7 +98,10 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
-# alias docexec="docker exec -it web bash"
+alias diprune="docker images | grep none | awk '{ print $3 }' | xargs docker rmi"
+alias dcprune="docker ps -aq | xargs docker rm"
+alias dnames="docker ps --format '{{ .Names }}'"
+alias dexec="docker exec -it $(dnames | head -1) bash"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

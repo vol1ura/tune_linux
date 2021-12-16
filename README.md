@@ -41,6 +41,12 @@ Here is my plugins set:
 plugins=(git docker docker-compose zsh-syntax-highlighting zsh-autosuggestions rails rvm virtualenv command-not-found copybuffer)
 ```
 
+### 5. Configure custom theme
+
+I use customized https://github.com/caiogondim/bullet-train.zsh
+
+![zsh theme](zsh_theme.png)
+
 ## RClone to handle cloud disks
 
 See official documentation https://rclone.org/install/
@@ -50,7 +56,7 @@ curl https://rclone.org/install.sh | sudo bash
 rclone config
 ```
 
-1. Edit and copy file `configs/rclone@.service` to `/lib/systemd/system`. 
+1. Edit and copy file `configs/rclone@.service` to `/lib/systemd/system`.
 
 2. You need also to create a remote on RClone and a folder on your disk, both with same name <rclone-remote>.
 
@@ -74,7 +80,7 @@ sudo systemctl status rclone@<rclone-remote>.service
 
 My shell scripts runs Yandex.Disk and OneDrive.
 
-## Vim configuration
+## Vim distribution
 
 I use Janus: https://github.com/carlhuda/janus
 
