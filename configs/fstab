@@ -14,6 +14,6 @@ UUID= /home ext4 defaults 0 2
 # swap was on /dev/sda1 during installation
 UUID= none swap sw 0 0
 # ntfs disk D with Data
-UUID= /media/vol1ura/data ntfs-3g rw,nls=utf8,uid=1000,gid=1000,allow_other,default_permissions,norecover,hide_hid_files,hide_dot_files,windows_names 0 0
+UUID= /media/vol1ura/data ntfs-3g rw,nls=utf8,uid=1000,gid=1000,dmask=027,fmask=137,allow_other,norecover,windows_names 0 0
 # other linux file system
 UUID= /media/vol1ura/other ext4 defaults 0 0

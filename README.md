@@ -43,7 +43,7 @@ plugins=(git docker docker-compose zsh-syntax-highlighting zsh-autosuggestions r
 
 ### 5. Configure custom theme
 
-I use customized https://github.com/caiogondim/bullet-train.zsh
+I use customized https://github.com/caiogondim/bullet-train.zsh - see my config `configs/bullet-train.zsh-theme`
 
 ![zsh theme](zsh_theme.png)
 
@@ -97,6 +97,7 @@ Edit `configs/fstab` and copy it to `/etc/fstab`
 
 ```shell
 sudo cp ./configs/fstab /etc/fstab
+sudo mount -av
 ```
 
 ## Cinnamon desktop customization
