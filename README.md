@@ -1,5 +1,7 @@
 # Useful programs and configs
 
+* [Pyenv installation on Linux](pyenv.md)
+
 ## IMWheel for remapping keyboard and mouse buttons
 
 Install
