@@ -1,6 +1,7 @@
 # Useful programs and configs
 
-* [Pyenv installation on Linux](pyenv.md)
+* [Pyenv usage on Linux](pyenv.md)
+* [Chromedriver installation on Linux](install_chromedriver.md)
 
 ## IMWheel for remapping keyboard and mouse buttons
 
