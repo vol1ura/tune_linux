@@ -98,10 +98,26 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
-alias diprune="docker images | grep none | awk '{ print $3 }' | xargs docker rmi"
+alias dimprune="docker images | grep none | awk '{ print $3 }' | xargs docker rmi"
 alias dcprune="docker ps -aq | xargs docker rm"
-alias dnames="docker ps --format '{{ .Names }}'"
-alias dexec="docker exec -it $(dnames | head -1) bash"
+alias dcnames="docker ps --format '{{ .Names }}'"
+alias dexec="docker exec -it $(dcnames | head -1) bash"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(direnv hook zsh)"
+
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+ eval "$(pyenv init -)"
+fi
+
